@@ -2,6 +2,7 @@ package com.chongyan.wordcount;
 
 import java.io.IOException;
 
+import com.chongyan.constant.PathConstant;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -15,8 +16,8 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 public class WordCountDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        Path inPutPath = new Path(System.getProperty("user.dir") + "\\data\\mapreduce\\wordcount\\input\\wordcount.txt");
-        Path outPutPath = new Path(System.getProperty("user.dir") + "\\data\\mapreduce\\wordcount\\output");
+        Path inPutPath = new Path(PathConstant.WORD_COUNT_INPUT_PATH.getValue());
+        Path outPutPath = new Path(PathConstant.WORD_COUNT_OUTPUT_PATH.getValue());
 
 
 
