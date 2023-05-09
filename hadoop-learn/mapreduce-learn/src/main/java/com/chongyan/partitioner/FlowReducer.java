@@ -1,15 +1,14 @@
 package com.chongyan.partitioner;
 
-import com.chongyan.writable.FlowBean;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class FlowReducer extends Reducer<Text, com.chongyan.writable.FlowBean, Text, com.chongyan.writable.FlowBean> {
-    private com.chongyan.writable.FlowBean outV = new com.chongyan.writable.FlowBean();
+public class FlowReducer extends Reducer<Text, FlowBean, Text, FlowBean> {
+    private FlowBean outV = new FlowBean();
     @Override
-    protected void reduce(Text key, Iterable<com.chongyan.writable.FlowBean> values, Context context) throws IOException, InterruptedException {
+    protected void reduce(Text key, Iterable<FlowBean> values, Context context) throws IOException, InterruptedException {
 
         long totalUp = 0;
         long totalDown = 0;
