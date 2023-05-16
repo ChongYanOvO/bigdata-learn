@@ -23,7 +23,9 @@ public enum PathConstant {
     MAP_JOIN_OUTPUT_PATH(BASE_PATH.value + "\\mapjoin\\output"),
     MAP_JOIN_CACHE_PATH("file:///F:/IdeaProjects/bigdata-learn/data/mapreduce/mapjoin/cache/pd.txt"),
     ETL_INPUT_PATH(BASE_PATH.value + "\\etl\\input\\*"),
-    ETL_OUTPUT_PATH(BASE_PATH.value + "\\etl\\output");
+    ETL_OUTPUT_PATH(BASE_PATH.value + "\\etl\\output"),
+    COMPRESS_INPUT_PATH(BASE_PATH.value + "\\compress\\input\\*"),
+    COMPRESS_OUTPUT_PATH(BASE_PATH.value + "\\compress\\output");
 
     private String value;
 
